@@ -1,6 +1,7 @@
 #include "../inc/utils.h"
+#include "../inc/list.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
 
 void show_chars_count(FILE *fpi) {
@@ -10,4 +11,14 @@ void show_chars_count(FILE *fpi) {
     while ((character = fgetc(fpi)) != EOF) i++;
 
     printf("Il y a %d caracteres\n", i);
+}
+
+Node *count_occurences(char *string) {
+    Node *start = create_SLL();
+
+    for (int i = 0; i < strlen(string); i++){
+        add_letter(start, string[i]);
+    }
+
+    return start;
 }
