@@ -24,6 +24,9 @@ void translate_file(FILE *fpi, FILE *fpo) {
 
     while ((character = fgetc(fpi)) != EOF)
     {
-        fprintf(fpo, "0%d", translate_char((int) character));
+        if (character < 64)
+            fprintf(fpo, "00%d", translate_char((int) character));
+        else
+            fprintf(fpo, "0%d", translate_char((int) character));
     }
 }
