@@ -14,12 +14,16 @@ int main(void) {
 //    show_chars_count(fpi);
 
     char string[] = "TASSES";
+    List list = count_occurences(string);
 
-    show_SLL(count_occurences(string));
+    show_SLL(list);
     /*
      * $ ./main
         :0->T:1->A:1->S:3->E:1->/
      */
+
+    Tree *htree = create_huffman_tree(list);
+    print_tree(htree);
 
     return 0;
 }
