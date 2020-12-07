@@ -6,8 +6,7 @@
 int translate_char(int ch) {
     int out = 0, i = 1, rem;
 
-    while (ch > 0)
-    {
+    while (ch > 0) {
         rem = ch % 2;
         out += (i * rem);
 
@@ -22,8 +21,7 @@ int translate_char(int ch) {
 void translate_file(FILE *fpi, FILE *fpo) {
     char character;
 
-    while ((character = fgetc(fpi)) != EOF)
-    {
+    while ((character = fgetc(fpi)) != EOF) {
         if (character < 64)
             fprintf(fpo, "00%d", translate_char((int) character));
         else

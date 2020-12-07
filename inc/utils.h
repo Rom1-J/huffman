@@ -10,6 +10,6 @@
 
 void show_chars_count(FILE *fpi);
 
-Node* count_occurences(char* string);
+Node *count_occurences(char *string);
 
 #endif //INC_HUFFMAN_UTILS_H

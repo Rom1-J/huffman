@@ -27,22 +27,38 @@ typedef struct TreeList {
     struct TreeList *next;
 } TreeList;
 
-List create_SLL();
-void free_SLL(Node *head);
-void show_SLL(Node *head);
-void add_letter(Node *hear, char letter);
+//////////////////////////////////////////////////////////////
+
+List create_huffman_list(FILE *fpi);
+
 List pop(List list);
+
+List create_SLL();
+
+void free_SLL(Node *head);
+
+void show_SLL(Node *head);
+
+void add_letter(Node *hear, char letter);
 
 //////////////////////////////////////////////////////////////
 
 Tree *create_huffman_tree(List list);
+
 Tree *create_tree(Tree *left, Tree *right, int weight);
+
 Tree *create_tree_node(int occ, char letter);
+
 void insert_tree_node(TreeList **list, Tree *node);
+
 void delete_node(TreeList **list, Tree *node);
+
 int compare_node(Tree *node1, Tree *node2);
+
 int tree_list_len(TreeList *list);
+
 Tree *tree_list_min(TreeList **list);
+
 void print_tree(Tree *tree);
 
 #endif //INC_HUFFMAN_LIST_H

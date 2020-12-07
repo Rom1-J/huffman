@@ -1,6 +1,45 @@
 #include "../inc/list.h"
 
 
+List create_huffman_list(FILE *fpi) {
+    if (!fpi) return NULL;
+
+    char letter;
+    int exist = 0;
+
+    List list = malloc(sizeof(*list));
+
+    list->occ = 1;
+    list->letter = fgetc(fpi);
+    list->next = NULL;
+
+
+    Node *curr;
+    curr = list;
+
+    while ((letter = fgetc(fpi)) != EOF) {
+        while (curr) {
+            if (letter == curr->letter) {
+                curr->occ++;
+                exist = 1;
+            }
+
+            curr = curr->next;
+
+        }
+
+        if (!exist) {
+            add_letter(list, letter);
+        }
+
+        exist = 0;
+        curr = list;
+    }
+
+    return list;
+}
+
+
 List create_SLL() {
     return (struct Node *) malloc(sizeof(struct Node));
 }

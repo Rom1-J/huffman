@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 int main(void) {
-//    FILE *fpi, *fpo;
+    FILE *fpi, *fpo;
 //
-//    fpi = fopen("test/Alice.txt", "r");
+    fpi = fopen("test/Alice.txt", "r");
 //    fpo = fopen("test/Output.txt", "w");
 //
 //    translate_file(fpi, fpo);
@@ -13,8 +13,7 @@ int main(void) {
 //    fpi = fopen("test/Alice.txt", "r");
 //    show_chars_count(fpi);
 
-    char string[] = "TASSES";
-    List list = count_occurences(string);
+    List list = create_huffman_list(fpi);
 
     show_SLL(list);
     /*
