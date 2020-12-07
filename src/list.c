@@ -256,3 +256,12 @@ void print_tree(Tree *tree) {
 
     if (tree->right) print_tree(tree->right);
 }
+
+void free_tree(Tree *tree) {
+    if (!tree) return;
+
+    free_tree(tree->left);
+    free_tree(tree->right);
+
+    free(tree);
+}

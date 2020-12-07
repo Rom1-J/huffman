@@ -61,4 +61,6 @@ Tree *tree_list_min(TreeList **list);
 
 void print_tree(Tree *tree);
 
+void free_tree(Tree *tree);
+
 #endif //INC_HUFFMAN_LIST_H

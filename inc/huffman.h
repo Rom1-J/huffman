@@ -4,6 +4,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "../inc/list.h"
+#include "../inc/dict.h"
+#include "../inc/utils.h"
 
 #ifndef INC_HUFFMAN_HUFFMAN_H
 #define INC_HUFFMAN_HUFFMAN_H
