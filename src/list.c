@@ -1,6 +1,4 @@
 #include "../inc/list.h"
-#include "../inc/tree.h"
-
 
 List create_huffman_list(FILE *fpi) {
     if (!fpi) return NULL;
@@ -8,8 +6,7 @@ List create_huffman_list(FILE *fpi) {
     char letter;
     int exist = 0;
 
-    List list;
-    list = malloc(sizeof(*list));
+    List list = malloc(sizeof(*list));
     list->letter = fgetc(fpi);
     list->occ = 1;
     list->next = NULL;
@@ -29,7 +26,6 @@ List create_huffman_list(FILE *fpi) {
         exist = 0;
         curr = list;
     }
-    printf("étape 1 faite\n");
     return list;
 }
 
@@ -53,7 +49,6 @@ List pop(List list) {
 
     el = list->next;
     free(list);
-    list = NULL;
 
     return el;
 }

@@ -4,8 +4,8 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "../inc/list.h"
-#include "../inc/stack.h"
+#include "list.h"
+#include "stack.h"
 
 #ifndef INC_HUFFMAN_DICT_H
 #define INC_HUFFMAN_DICT_H

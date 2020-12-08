@@ -4,9 +4,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "../inc/list.h"
-#include "../inc/dict.h"
-#include "../inc/utils.h"
+#include "list.h"
+#include "dict.h"
+#include "utils.h"
 
 #ifndef INC_HUFFMAN_ENCODER_H
 #define INC_HUFFMAN_ENCODER_H

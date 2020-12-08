@@ -8,7 +8,7 @@
 #ifndef INC_HUFFMAN_TREE_H
 #define INC_HUFFMAN_TREE_H
 
-#include "../inc/list.h"
+#include "list.h"
 
 typedef struct Tree {
     int occ;

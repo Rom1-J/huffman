@@ -51,7 +51,6 @@ Tree *h_tree(List list) {
     }
     tree = TreeList_min(&node_list);
 
-    printf("étape 2 faite\n");
 
     return tree;
 }
@@ -127,7 +126,7 @@ Tree *TreeList_min(TreeList **list) {
         delete_node(list, curr);
 
         return curr;
-    }
+    } else return NULL;
 }
 
 int TreeList_len(TreeList *list) {
