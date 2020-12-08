@@ -9,6 +9,7 @@ Stack *create_stack(char letter) {
 }
 
 Stack *push(Stack *stack, char letter) {
+
     if (!stack) return create_stack(letter);
 
     else {

@@ -1,8 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "../inc/dict.h"
 #include "../inc/list.h"
 #include "../inc/stack.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 void create_dict(Tree *tree, Stack **stack, FILE *dict) {
     if (tree) {
@@ -10,7 +10,7 @@ void create_dict(Tree *tree, Stack **stack, FILE *dict) {
             if (tree->left->letter != 0) {
                 *stack = push(*stack, '0');
 
-                fprintf(dict, "%c : ", tree->left->letter);
+                fprintf(dict, "%c > ", tree->left->letter);
 
                 stack2dict(*stack, dict);
                 fputc('\n', dict);
@@ -24,10 +24,10 @@ void create_dict(Tree *tree, Stack **stack, FILE *dict) {
         }
 
         if (tree->right) {
-            if (tree->left->letter != 0) {
-                (*stack) = push(*stack, '1');
+            if (tree->right->letter != 0) {
+                *stack = push(*stack, '1');
 
-                fprintf(dict, "%c : ", tree->right->letter);
+                fprintf(dict, "%c > ", tree->right->letter);
 
                 stack2dict(*stack, dict);
                 fputc('\n', dict);

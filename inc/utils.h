@@ -10,4 +10,6 @@
 
 int chars_count(FILE *fpi);
 
+int bin2int(char *string);
+
 #endif //INC_HUFFMAN_UTILS_H

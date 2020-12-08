@@ -4,7 +4,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "../inc/tree.h"
+#include "tree.h"
 
 #ifndef INC_HUFFMAN_LIST_H
 #define INC_HUFFMAN_LIST_H
