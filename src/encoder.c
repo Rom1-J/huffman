@@ -10,21 +10,24 @@
 void compress(FILE *fpi) {
     printf("compression...\n");
 
-    FILE *dict_w = fopen("dict", "w");
-    FILE *dict_r = fopen("dict", "r");
+    FILE *dict_w, *dict_r;
 
     List list = create_huffman_list(fpi);
     Tree *tree = h_tree(list);
-
     Stack *stack = NULL;
+
+    dict_w = fopen("dict", "w");
     create_dict(tree, &stack, dict_w);
     fclose(dict_w);
 
     rewind(fpi);
+
+    dict_r = fopen("dict", "r");
     encode(fpi, dict_r);
     fclose(dict_r);
 
     clear_tree(tree);
+    clear_list(list);
 
     printf("fin\n");
 

@@ -52,3 +52,11 @@ List pop(List list) {
 
     return el;
 }
+
+void clear_list(List list) {
+    if (!list) return;
+
+    clear_list(list->next);
+
+    free(list);
+}

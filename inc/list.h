@@ -23,4 +23,6 @@ List append(List list, char letter, int occ);
 
 List pop(List list);
 
+void clear_list(List list);
+
 #endif //INC_HUFFMAN_LIST_H
