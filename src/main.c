@@ -1,16 +1,12 @@
-//#include "../inc/translate.h"
-#include "../inc/utils.h"
-#include "../inc/huffman.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include "../inc/encoder.h"
+#include <math.h>
 
 int main(void) {
-    FILE *fpi;
-
-    fpi = fopen("test/Alice.txt", "r");
-
-    compress(fpi);
-
-    fclose(fpi);
+    FILE* input = fopen("test/Alice.txt","r");
+    compress(input);
+    fclose(input);
 
     return 0;
 }

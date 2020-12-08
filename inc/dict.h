@@ -5,24 +5,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "../inc/list.h"
+#include "../inc/stack.h"
 
 #ifndef INC_HUFFMAN_DICT_H
 #define INC_HUFFMAN_DICT_H
 
-typedef struct Stack {
-    char letter;
-    struct Stack *next;
-} Stack;
+typedef struct Dict {
+    char key;
+    char *val;
+
+    struct Dict *left;
+    struct Dict *right;
+} Dict;
 
 //////////////////////////////////////////////////////////////
 
-void create_dict(Tree *a, Stack **stack, FILE *dict);
-
-Stack *create_stack(char letter);
-
-Stack *stack_push(Stack *stack, char letter);
-
-Stack *stack_pop(Stack *stack);
+void create_dict(Tree *tree, Stack **P, FILE *dict);
 
 void stack2dict(Stack *stack, FILE *dict);
 

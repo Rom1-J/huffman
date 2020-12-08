@@ -8,8 +8,6 @@
 #ifndef INC_HUFFMAN_UTILS_H
 #define INC_HUFFMAN_UTILS_H
 
-void show_chars_count(FILE *fpi);
-
-Node *count_occurences(char *string);
+int chars_count(FILE *fpi);
 
 #endif //INC_HUFFMAN_UTILS_H
