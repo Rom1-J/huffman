@@ -1,7 +1,15 @@
 //
 // Created by romain on 07/12/2020.
 //
-
+/*****************************************************************//**
+ * \file dict.h.
+ *  \brief  
+This module allows you to create the Huffman dictionary sought for our input file
+we get the necessary information (characters, their numbers, position) and 
+we will transfer them to a text file "dictionnary".
+ *
+ * \author Dylan Mouheb and his group 
+ * \date   December 2020 *********************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
 #include "list.h"
@@ -9,7 +17,10 @@
 
 #ifndef INC_HUFFMAN_DICT_H
 #define INC_HUFFMAN_DICT_H
-
+/**
+ * \typedef struct Dict 
+ * \ brief structur composed of 4 elements: key, *val, *left, *right.
+ */
 typedef struct Dict {
     char key;
     char *val;
@@ -19,6 +30,16 @@ typedef struct Dict {
 } Dict;
 
 //////////////////////////////////////////////////////////////
+/**
+* \brief  
+* create_dict: take as a parameter: Tree *tree, Stack **P, FILE *dict \n.
+* stack2dict:  take as a parameter: Stack *stack, FILE *dict\n.
+* \n Example :
+* \code{.c}
+* \endcode
+* \return create_dict --> initializes the dictionary 
+* \return stack2dict --> turn the stack into a dictionary
+*/
 
 void create_dict(Tree *tree, Stack **P, FILE *dict);
 
