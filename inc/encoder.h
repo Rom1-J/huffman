@@ -5,7 +5,8 @@
  * \file encoder.h.
  *  \brief Encode the text file from the "dict" module and insert it in the "test" folder.
  * \author Dylan Mouheb and his group
- * \date   December 2020 *********************************************************************/
+ * \date   December 2020
+ *********************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
 #include "list.h"

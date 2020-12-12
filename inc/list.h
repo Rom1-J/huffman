@@ -20,6 +20,7 @@
  * \typedef struct Node
  * \brief has 3 elements: occ(numbr of occurrences) , letter (the character), and a structure pointer (*next).
  */
+
 typedef struct Node {
     int occ;
     char letter;

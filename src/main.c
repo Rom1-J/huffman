@@ -5,7 +5,9 @@
 
 int main(void) {
     FILE* input = fopen("test/Alice.txt","r");
+
     compress(input);
+
     fclose(input);
 
     return 0;

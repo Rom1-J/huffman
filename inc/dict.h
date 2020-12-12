@@ -9,7 +9,8 @@ we get the necessary information (characters, their numbers, position) and
 we will transfer them to a text file "dictionnary".
  *
  * \author Dylan Mouheb and his group 
- * \date   December 2020 *********************************************************************/
+ * \date   December 2020
+ *********************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
 #include "list.h"
