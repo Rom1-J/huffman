@@ -3,13 +3,11 @@
 //
 /*****************************************************************//**
  * \file dict.h.
- * \brief
-this module permet de gérer les stacks \n.
-this fonctions are use in encoder and dict.
- *
- * \author Nicolas Gamberini and his group
- * \date   December 2020
- *********************************************************************/
+ *  \brief
+ *  this module permet de gérer les stacks \n.
+ *  this fonctions are use in encoder and dict.
+ *  * \author Nicolas Gamberini and his group
+ * \date   December 2020 *********************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
 

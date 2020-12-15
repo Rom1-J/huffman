@@ -1,5 +1,15 @@
 #include "../inc/tree.h"
 
+Tree *init_tree() {
+    Tree *tree = (Tree *) malloc(sizeof(Tree));
+    tree->letter = '\0';
+    tree->occ = 0;
+    tree->left = NULL;
+    tree->right = NULL;
+
+    return tree;
+}
+
 Tree *create_tree(Tree *left, Tree *right, int weight) {
     Tree *tree = create_node(0, weight);
 
@@ -31,7 +41,6 @@ Tree *h_tree(List list) {
         left = create_node(letter, occ);
         insert_node(&node_list, left);
     }
-
     while (TreeList_len(node_list) != 1) {
         left = TreeList_min(&node_list);
         right = TreeList_min(&node_list);
@@ -40,7 +49,6 @@ Tree *h_tree(List list) {
         tree = create_tree(left, right, weight);
         insert_node(&node_list, tree);
     }
-
     tree = TreeList_min(&node_list);
 
 
